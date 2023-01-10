@@ -44,3 +44,4 @@ jobs:
           SLACK_MESSAGE: 'Something happend! Check k3S!'
           SLACK_USERNAME: ntBot
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          
