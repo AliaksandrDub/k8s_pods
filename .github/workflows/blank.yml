@@ -1,9 +1,9 @@
 name: k3s pods
 
 on: 
-  push:
-  schedule:
-    - cron: "*/15 * * * *"
+  push: [main]
+#  schedule:
+ #   - cron: "*/15 * * * *"
 env:
   report: report.log
   crash_report: crash_report.log
