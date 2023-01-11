@@ -1,7 +1,11 @@
 name: k3s pods
 
 on: 
-  push: [main]
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+#  push:
 #  schedule:
  #   - cron: "*/15 * * * *"
 env:
