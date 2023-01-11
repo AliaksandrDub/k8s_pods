@@ -19,6 +19,7 @@ jobs:
       - name: Connect to K3S host
         id: get_pods
         run: |
+           which ssh-agent
            mkdir ~/.ssh
            eval `ssh-agent -s`
            ssh-add - <<< "${{ secrets.SSH_KEY }}" 
