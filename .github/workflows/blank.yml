@@ -16,6 +16,7 @@ jobs:
         id: get_pods
         run: |
            mkdir ~/.ssh
+           cat ${{ secrets.SSH_KEY }}
            eval `ssh-agent -s`
            ssh-add - <<< "${{ secrets.SSH_KEY }}" 
            ssh-keyscan -H ${{ secrets.BASTION_IP }} >> ~/.ssh/known_hosts
