@@ -43,7 +43,7 @@ jobs:
         if: steps.check_pods.outputs.pods_fail > 1
         uses: rtCamp/action-slack-notify@v2 
         env:
-          SLACK_CHANNEL: github_notifications
+          SLACK_CHANNEL: k8s_pods
           SLACK_TITLE: 'CHECK PODS'
           LACK_ICON: https://github.com/rtCamp.png?size=48
           SLACK_MESSAGE: 'Something happend! Check k3S!'
